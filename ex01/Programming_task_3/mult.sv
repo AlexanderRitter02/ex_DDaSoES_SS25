@@ -23,7 +23,7 @@ and_gate and8 (b2, a1, pp_21);
 and_gate and9 (b2, a2, pp_22);
 
 // buf(out, in) just propagates the same value
-buf(s0, a0);
+buf(s0, pp_00);
 
 // Summations: Row 1
 // Full-Adder names: fXY (X=row, Y=number of the adder from left)
@@ -46,7 +46,7 @@ fulladder f12 (
 fulladder f13 (
   .a(pp_12),
   .b(0),
-  .c_in(0),
+  .c_in(carry_for_f13),
   .s(sum_for_f22),
   .c_out(b_for_f23)
 );
