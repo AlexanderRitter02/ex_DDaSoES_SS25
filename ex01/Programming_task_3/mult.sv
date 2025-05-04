@@ -64,7 +64,7 @@ fulladder f22 (
   .a(pp_21),
   .b(sum_for_f22),
   .c_in(carry_for_f22),
-  .s(sum_for_f31),
+  .s(s3),
   .c_out(carry_for_f23)
 );
 
@@ -72,33 +72,8 @@ fulladder f23 (
   .a(pp_22),
   .b(b_for_f23),
   .c_in(carry_for_f23),
-  .s(sum_for_f32),
-  .c_out(b_for_f33)
-);
-
-// Row 3
-fulladder f31 (
-  .a(pp_30),
-  .b(sum_for_f31),
-  .c_in(0),
-  .s(s3),
-  .c_out(carry_for_f32)
-);
-
-fulladder f32 (
-  .a(pp_31),
-  .b(sum_for_f32),
-  .c_in(carry_for_f32),
   .s(s4),
-  .c_out(carry_for_f33)
-);
-
-fulladder f33 (
-  .a(pp_32),
-  .b(b_for_f33),
-  .c_in(carry_for_f33),
-  .s(s5),
-  .c_out(s6)
+  .c_out(s5)
 );
 
 endmodule
