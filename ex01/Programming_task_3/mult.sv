@@ -2,27 +2,28 @@
 `include "fulladder.sv"
 
 module mult(
-  input  logic a0, a1, a2, b0, b1, b2
+  input  logic a0, a1, a2, b0, b1, b2,
   output logic s0, s1, s2, s3, s4, s5
-)
+);
 
 // Partial products for 1st bit of B
 // ppBA (bit B from B, bit A from A)
-and pp_00 (b0, a0)
-and pp_01 (b0, a1)
-and pp_02 (b0, a2)
+and_gate and1 (b0, a0, pp_00);
+and_gate and2 (b0, a1, pp_01);
+and_gate and3 (b0, a2, pp_02);
 
 // Partial products for 2nd bit of B
-and pp_10 (b1, a0)
-and pp_11 (b1, a1)
-and pp_12 (b1, a2)
+and_gate and4 (b1, a0, pp_10);
+and_gate and5 (b1, a1, pp_11);
+and_gate and6 (b1, a2, pp_12);
 
 // Partial products for 3rd bit of B
-and pp_20 (b2, a0)
-and pp_21 (b2, a1)
-and pp_22 (b2, a2)
+and_gate and7 (b2, a0, pp_20);
+and_gate and8 (b2, a1, pp_21);
+and_gate and9 (b2, a2, pp_22);
 
-buf(s0, a0) // buf(out, in) just propagates the same value
+// buf(out, in) just propagates the same value
+buf(s0, a0);
 
 // Summations: Row 1
 // Full-Adder names: fXY (X=row, Y=number of the adder from left)
