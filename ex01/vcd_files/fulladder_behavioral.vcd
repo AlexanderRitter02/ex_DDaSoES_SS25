@@ -1,0 +1,56 @@
+$date
+    May  3, 2025  10:34:19
+$end
+$comment
+	SimVision SST: d37fa0eb34ee6115b71f12b7fe0b461f
+$end
+$version
+    TOOL:	xmsim(64)	22.09-s007
+$end
+$timescale
+    1 fs
+$end
+
+$scope module fulladder $end
+$var wire      1 !    a  $end
+$var wire      1 "    b  $end
+$var wire      1 #    c_in  $end
+$var reg       1 $    s $end
+$var reg       1 %    c_out $end
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+0!
+0"
+0#
+0$
+0%
+$end
+#5000
+1#
+1$
+#10000
+0#
+1"
+#15000
+1#
+0$
+1%
+#20000
+0"
+0#
+1!
+1$
+0%
+#25000
+1#
+0$
+1%
+#30000
+0#
+1"
+#35000
+1#
+1$
+#40000
