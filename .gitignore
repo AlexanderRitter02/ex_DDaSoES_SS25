@@ -1,5 +1,6 @@
-# Don't accidentally commit submission zips
-.zip
+# Don't accidentally commit submission pdfs or zips
+*.pdf
+*.zip
 
 # SystemVeriLog folders
 sim/
