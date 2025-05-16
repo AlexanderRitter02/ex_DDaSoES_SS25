@@ -28,7 +28,7 @@ HDL_SRC             := xor_chunk.sv
 # Put testbench file here!
 HDL_TB_SRC          := xor_chunk_testbench.sv
 # Top module name for Simulation. If a testbench exits this should be the name of the testbench module.
-HDL_TB_TOP          := xor_chunk
+HDL_TB_TOP          := xor_chunk_test
 
 # --- Synthesis and Post-Synthesis related ---
 # Top module name Synthesis.
