@@ -1,3 +1,11 @@
+# Don't accidentally commit submission zips
 .zip
 
+# SystemVeriLog folders
 sim/
+coverage/
+cov_work/
+
+# Machine files
+xrun.log
+xrun.key
