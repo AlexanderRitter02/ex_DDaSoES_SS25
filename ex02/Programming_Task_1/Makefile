@@ -26,9 +26,9 @@ export MDV_XLM_HOME        := $(shell dirname $(shell dirname $(dir $(XCELIUM_BI
 # List source files here (not the testbench!).
 HDL_SRC             := cbc.sv xor_chunk.sv
 # Put testbench file here!
-HDL_TB_SRC          := 
+HDL_TB_SRC          := cbc_testbench.sv
 # Top module name for Simulation. If a testbench exits this should be the name of the testbench module.
-HDL_TB_TOP          := cbc
+HDL_TB_TOP          := cbc_testbench
 
 # --- Synthesis and Post-Synthesis related ---
 # Top module name Synthesis.
