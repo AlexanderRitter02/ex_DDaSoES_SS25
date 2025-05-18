@@ -1,0 +1,89 @@
+$date
+    May 18, 2025  15:23:40
+$end
+$comment
+	SimVision SST: d37fa0eb34ee6115b71f12b7fe0b461f
+$end
+$version
+    TOOL:	xmsim(64)	22.09-s007
+$end
+$timescale
+    1 fs
+$end
+
+$scope module xor_chunk_test $end
+$var reg       8 !    key_8bit [7:0] $end
+$var reg       8 "    chunk_8bit [7:0] $end
+$var reg       8 #    output_8bit [7:0] $end
+$var reg      16 $    key_16bit [15:0] $end
+$var reg      16 %    chunk_16bit [15:0] $end
+$var reg      16 &    output_16bit [15:0] $end
+
+$scope module encrypter $end
+$var parameter 32 '    n $end
+$var wire      8 (    chunk [7:0] $end
+$var wire      8 )    key [7:0] $end
+$var reg       8 *    out [7:0] $end
+$upscope $end
+
+
+$scope module encrypter16 $end
+$var parameter 32 +    n $end
+$var wire     16 ,    chunk [15:0] $end
+$var wire     16 -    key [15:0] $end
+$var reg      16 .    out [15:0] $end
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+b10 +
+b1 '
+b11100111 !
+b10111 "
+b11110000 #
+bx $
+bx %
+bx &
+b10111 (
+b11100111 )
+b11110000 *
+bx ,
+bx -
+bx .
+$end
+#10000
+b0 !
+b10110110 "
+b10110110 (
+b0 )
+b10110110 *
+b10110110 #
+#20000
+b11111111 !
+b11111111 )
+b1001001 *
+b1001001 #
+#30000
+b10101010 !
+b1010101 "
+b1010101 (
+b10101010 )
+b11111111 *
+b11111111 #
+#40000
+b1010101010101010 $
+b1001111111111101 %
+b1001111111111101 ,
+b1010101010101010 -
+b11010101010111 .
+b11010101010111 &
+#50000
+b1001101100111101 $
+b1001101100111101 %
+b1001101100111101 ,
+b1001101100111101 -
+b0 .
+b0 &
+#60000
