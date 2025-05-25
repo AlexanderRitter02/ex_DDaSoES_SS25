@@ -101,19 +101,19 @@ module tb_pld;
     #(10ns)
     
 	// Testbench Start
-	#(10ns) ;
+	#(10ns);
 	test2_inputs = 'b00;
-	#(10ns) ;
-        assert (test2_outputs_clone == test2_outputs_pld);
+	#(10ns);
+  assert (test2_outputs_clone == test2_outputs_pld);
 	test2_inputs = 'b01;
-	#(10ns) ;
-        assert (test2_outputs_clone == test2_outputs_pld);
+	#(10ns);
+  assert (test2_outputs_clone == test2_outputs_pld);
 	test2_inputs = 'b10;
-	#(10ns) ;
-        assert (test2_outputs_clone == test2_outputs_pld);
+	#(10ns);
+  assert (test2_outputs_clone == test2_outputs_pld);
 	test2_inputs = 'b11;
-	#(10ns) ;
-        assert (test2_outputs_clone == test2_outputs_pld);
+	#(10ns);
+  assert (test2_outputs_clone == test2_outputs_pld);
 	// Testbench End
   end
   // ######## TEST-2 End ########
@@ -123,12 +123,67 @@ module tb_pld;
 
 
 
+  // ######## TEST-3 Start ########
+  // Implements: OR(AND(A, B, C)), OR(AND(NOT(A), NOT(B), NOT(C))), OR(AND(NOT(A), B, C)), OR(AND(A, NOT(B), C)), OR(AND(NOT(A), NOT(B), C)), OR(AND(A, B, NOT(C))), OR(AND(NOT(A), B, NOT(C))), OR(AND(A, NOT(B), NOT(C)))}
 
+  localparam test3_NUM_PORTS_IN = 3;
+  localparam test3_NUM_PORTS_OUT = 8;
 
+  logic [test3_NUM_PORTS_IN - 1 : 0] test3_inputs;
+  logic [(2**(test3_NUM_PORTS_IN + 2)) * (test3_NUM_PORTS_IN**2) - 1 : 0] test3_and_matrix_fuses_conf;
+  logic [test3_NUM_PORTS_OUT * (2**(2*test3_NUM_PORTS_IN)) - 1 : 0] test3_or_matrix_fuses_conf;
+  logic [test3_NUM_PORTS_OUT - 1 : 0] test3_outputs_pld;
+  logic [test3_NUM_PORTS_OUT - 1 : 0] test3_outputs_clone;
 
+  pld #(
+    .NUM_PORTS_IN(test3_NUM_PORTS_IN),
+    .NUM_PORTS_OUT(test3_NUM_PORTS_OUT)
+  ) pld_test3 (
+    .inputs_i(test3_inputs),
+    .and_matrix_fuses_conf_i(test3_and_matrix_fuses_conf),
+    .or_matrix_fuses_conf_i(test3_or_matrix_fuses_conf),
+    .outputs_o(test3_outputs_pld)
+  );
+  test3_mirror_func test3_mirror (
+    .in(test3_inputs),
+    .out(test3_outputs_clone)
+  );
 
+  initial begin
 
-
+    test3_and_matrix_fuses_conf = 'b000001000001000001010000000100000001000010000010000010100000001000000010000010000010000010010000000100000010000001000001000001010000001000000001000010000010000010010000001000000010000001000001000001100000000100000001000010000010000010100000000100000010000001000001000001100000001000000001;
+    test3_or_matrix_fuses_conf  = 'b11111111000000000000000000000000000000000000000000000000000000000000000011111111000000000000000000000000000000000000000000000000000000000000000011111111000000000000000000000000000000000000000000000000000000000000000011111111000000000000000000000000000000000000000000000000000000000000000011111111000000000000000000000000000000000000000000000000000000000000000011111111000000000000000000000000000000000000000000000000000000000000000011111111000000000000000000000000000000000000000000000000000000000000000011111111;
+    #(10ns)
+    
+    // Testbench Start
+    #(10ns);
+    test3_inputs = 'b000;
+    #(10ns);
+    assert (test3_outputs_clone == test3_outputs_pld);
+    test3_inputs = 'b001;
+    #(10ns);
+    assert (test3_outputs_clone == test3_outputs_pld);
+    test3_inputs = 'b010;
+    #(10ns);
+    assert (test3_outputs_clone == test3_outputs_pld);
+    test3_inputs = 'b011;
+    #(10ns);
+    assert (test3_outputs_clone == test3_outputs_pld);
+    test3_inputs = 'b100;
+    #(10ns);
+    assert (test3_outputs_clone == test3_outputs_pld);
+    test3_inputs = 'b101;
+    #(10ns);
+    assert (test3_outputs_clone == test3_outputs_pld);
+    test3_inputs = 'b110;
+    #(10ns);
+    assert (test3_outputs_clone == test3_outputs_pld);
+    test3_inputs = 'b111;
+    #(10ns);
+    assert (test3_outputs_clone == test3_outputs_pld);
+    // Testbench End
+  end
+  // ######## TEST-3 End ########
 
 
 endmodule
