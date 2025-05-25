@@ -24,7 +24,7 @@ export MDV_XLM_HOME        := $(shell dirname $(shell dirname $(dir $(XCELIUM_BI
 # ==== Design Files ====
 # --- Design Setup and Simulation related ---
 # List source files here (not the testbench!).
-HDL_SRC             := ./fuse.sv ./pld.sv
+HDL_SRC             := ./fuse.sv ./pld.sv ./mirror_modules.sv
 # Put testbench file here!
 HDL_TB_SRC          := ./tb_pld.sv
 # Top module name for Simulation. If a testbench exits this should be the name of the testbench module.

@@ -75,15 +75,15 @@ module pld #(
     for (genvar y = 0; y < 2 ** NUM_PORTS_IN; y++) begin : gen_any_port  // iterate over every port (including inverted ports)
       for (genvar x = 0; x < 2 ** NUM_PORTS_IN; x++) begin : gen_any_input  // iterate over every input for each OR
 
-        //fuse fuse_or_a (
-        //  .a(and_matrix_output[x]),
-        //  .b(or_matrix_fuse_output[i][y]),
-        //  .set(or_matrix_fuse_control[i][y][x])
-        //);
+        fuse fuse_or_a (
+          .a(and_matrix_output[x]), // We have 2^n AND blocks, one for every var
+          .b(or_matrix_fuse_output[i][y]),
+          .set(or_matrix_fuse_control[i][x][y])
+        );
 
       end
     end
     // Generate OR output
-    assign outputs_o[i] = 'b0; //|or_matrix_fuse_output[i];
+    assign outputs_o[i] = |or_matrix_fuse_output[i];
   end
 endmodule
