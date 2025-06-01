@@ -72,7 +72,7 @@ module cpu (
   assign next_program_counter_jmp_w = programm_counter_r + (id_immediate * 2);
 
   // Next programm counter selector
-  assign next_program_counter_sel_w = ((id_opcode == JAL.opcode) & alu_zero) | ((id_opcode == BNE.opcode) & ~alu_zero);
+  assign next_program_counter_sel_w = ((id_opcode == JAL.opcode | id_opcode == BEQ.opcode) & alu_zero) | ((id_opcode == BNE.opcode) & ~alu_zero);
 
   // Assign next PC value
   assign next_programm_counter_w = next_program_counter_sel_w ? next_program_counter_jmp_w : next_program_counter_regular_w;
@@ -89,21 +89,48 @@ module cpu (
   end
 
   // Instruction Decoding Instance
-  instruction_decoder instruction_decoder_m ( /* TODO */ );
+  instruction_decoder instruction_decoder_m (
+    .instruction_i    (instr_data_i),
+    .opcode_o         (id_opcode),
+    .rs1_o            (id_rs1),
+    .rs2_o            (id_rs2),
+    .funct3_o         (id_funct3),
+    .funct7_o         (id_funct7),
+    .rd_o             (id_rd),
+    .rf_rw_o          (id_rf_rw),
+    .err_o            (error_w),
+    .immediate_o      (id_immediate)
+  );
 
-  // Register File
-  // Create data input for RF
-  assign rf_data = // TODO
-
+  assign rf_data = (id_opcode == LW.opcode) ? mem_data_i : instr_mem_addr_o;
   // Register File Instance
-  register_file register_file_m ( /* TODO */ );
+  register_file register_file_m (
+    .clk_i             (clk_i),
+    .halt_i            (halt_w),
+    .rst_n_i           (rst_n_i),
+    .write_enable_i    (id_rf_rw),
+    .data_i            (rf_data),
+    .waddr_i           (id_rd),
+    .raddr_a_i         (id_rs1),
+    .raddr_b_i         (id_rs2),
+    .data_a_o          (rf_data_a),
+    .data_b_o          (rf_data_b)
+  );
 
   // ALU
   // Create input B for alu
   assign alu_value_b = (id_opcode == ADDI.opcode) ? id_immediate : rf_data_b;
 
   // ALU Instance
-  alu alu_m ( /* TODO */ );
+  alu alu_m (
+    .opcode_i     (id_opcode),
+    .value_a_i    (rf_data_a),
+    .funct3_i     (id_funct3),
+    .funct7_i     (id_funct7),
+    .value_b_i    (alu_value_b),
+    .zero_o       (alu_zero),
+    .result_o     (alu_result)
+  );
 
   // write back to memory
   assign mem_write_o = (halt_w | ~rst_n_i) ? '0 : (id_opcode == SW.opcode);

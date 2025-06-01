@@ -29,7 +29,7 @@ module alu (
   end
 
   // zero flag
-  assign zero_o = // TODO
+  assign zero_o = imm == 32'b0;
 
 
 endmodule
