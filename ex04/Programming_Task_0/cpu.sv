@@ -72,7 +72,7 @@ module cpu (
   assign next_program_counter_jmp_w = programm_counter_r + (id_immediate * 2);
 
   // Next programm counter selector
-  assign next_program_counter_sel_w = ((id_opcode == JAL.opcode | id_opcode == BEQ.opcode) & alu_zero) | ((id_opcode == BNE.opcode) & ~alu_zero);
+  assign next_program_counter_sel_w = (id_opcode == JAL.opcode & alu_zero) | ((id_opcode == BNE.opcode & id_funct3 == BNE.funct3) & ~alu_zero) | ((id_opcode == BEQ.opcode & id_funct3 == BEQ.funct3) & alu_zero);
 
   // Assign next PC value
   assign next_programm_counter_w = next_program_counter_sel_w ? next_program_counter_jmp_w : next_program_counter_regular_w;
