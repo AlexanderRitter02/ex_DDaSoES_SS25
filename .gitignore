@@ -1,6 +1,9 @@
-# Don't accidentally commit submission pdfs or zips
-*.pdf
+# Don't accidentally commit submission zips or submission files (named exXX_Taigel_Ritter.pdf)
+*_Taigel_Ritter.pdf
 *.zip
+
+# The same cheatsheet file for every new exercise is too much data
+cheat_sheet.pdf
 
 # SystemVeriLog folders
 sim/
