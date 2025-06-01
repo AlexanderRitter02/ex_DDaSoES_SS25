@@ -102,7 +102,7 @@ module cpu (
     .immediate_o      (id_immediate)
   );
 
-  assign rf_data = (id_opcode == LW.opcode) ? mem_data_i : instr_mem_addr_o;
+  assign rf_data = (id_opcode == LW.opcode) ? mem_data_i : alu_result;
   // Register File Instance
   register_file register_file_m (
     .clk_i             (clk_i),
