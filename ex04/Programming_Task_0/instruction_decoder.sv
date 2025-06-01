@@ -123,7 +123,7 @@ module instruction_decoder (
   always_comb begin : isntruction_selection
     case (unresolved_instruction.opcode)
       // ADD, MUL
-      ADD.opcode, MUL.opcode: begin
+      ADD.opcode, MUL.opcode, XOR.opcode: begin
         rs1_o    = r_type_instruction.rs1;
         rs2_o    = r_type_instruction.rs2;
         funct3_o = r_type_instruction.funct3;
@@ -163,7 +163,7 @@ module instruction_decoder (
         err_o    = 'b0;
       end
       // BNE
-      BNE.opcode: begin
+      BNE.opcode, BEQ.opcode: begin
         rs1_o    = s_type_instruction.rs1;
         rs2_o    = s_type_instruction.rs2;
         funct3_o = s_type_instruction.funct3;
@@ -211,7 +211,7 @@ module instruction_decoder (
         };
       end
       // B Immediate
-      BNE.opcode: begin
+      BNE.opcode, BEQ.opcode: begin
         immediate_o = {
           b_immediate.inst_31,
           b_immediate.inst_7,

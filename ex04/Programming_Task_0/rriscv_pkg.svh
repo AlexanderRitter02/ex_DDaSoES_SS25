@@ -75,6 +75,15 @@ package rriscv_pkg;
       opcode : 'b0110011
   };
 
+  localparam r_type XOR = '{
+      funct7 : 'b0000000,
+      rs2 : '{default: '0},
+      rs1 : '{default: '0},
+      funct3 : 'b100,
+      rd : '{default: '0},
+      opcode : 'b0110011
+  };
+
   localparam i_type ADDI = '{
       imm : '{default: '0},
       rs1 : '{default: '0},
@@ -107,6 +116,15 @@ package rriscv_pkg;
       rs2 : '{default: '0},
       rs1 : '{default: '0},
       funct3 : 'b001,
+      imm0 : '{default: '0},
+      opcode : 'b1100011
+  };
+
+  localparam s_type BEQ = '{
+      imm : '{default: '0},
+      rs2 : '{default: '0},
+      rs1 : '{default: '0},
+      funct3 : 'b000,
       imm0 : '{default: '0},
       opcode : 'b1100011
   };

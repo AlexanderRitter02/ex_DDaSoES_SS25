@@ -21,7 +21,9 @@ module alu (
       imm = (value_a_i + value_b_i);
     end else if ((opcode_i == MUL.opcode) & (funct7_i == 'b0000001)) begin
       imm = (value_a_i * value_b_i);
-    end else if (opcode_i == BNE.opcode) begin
+    end else if ((opcode_i == XOR.opcode) & (funct7_i == 'b0000000)) begin
+      imm = (value_a_i ^ value_b_i)
+    end else if (opcode_i == BNE.opcode | opcode_i == BEQ.opcode) begin
       imm = (value_a_i ^ value_b_i);
     end else begin
       imm = 'b0;
