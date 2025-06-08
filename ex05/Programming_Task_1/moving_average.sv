@@ -23,7 +23,7 @@ always_ff @(posedge clk_i or negedge rst_ni) begin
         measurement_pre_previous <= temperature;
         data_o <= temperature;
     end else begin
-        data_o <= (temperature + measurement_previous + measurement_pre_previous) / 3;
+        data_o <= (signed'(temperature) + signed'(measurement_previous) + signed'(measurement_pre_previous)) / 3;
         measurement_previous     <= temperature;
         measurement_pre_previous <= measurement_previous;
     end
