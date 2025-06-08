@@ -24,11 +24,11 @@ export MDV_XLM_HOME        := $(shell dirname $(shell dirname $(dir $(XCELIUM_BI
 # ==== Design Files ====
 # --- Design Setup and Simulation related ---
 # List source files here (not the testbench!).
-HDL_SRC             := status_module.sv
+HDL_SRC             := display_package.sv status_module.sv
 # Put testbench file here!
-HDL_TB_SRC          := ./tb_status_module.sv ./tmp_sens.sv ./tb_cdc.sv
+HDL_TB_SRC          := ./tb_status_module.sv
 # Top module name for Simulation. If a testbench exits this should be the name of the testbench module.
-HDL_TB_TOP          := tb_cdc
+HDL_TB_TOP          := tb_status_module
 
 # --- Synthesis and Post-Synthesis related ---
 # Top module name Synthesis.
@@ -38,7 +38,7 @@ HDL_SYN_TOP_TB_INST := i_dut
 
 # --- Waveform generation related ---
 # Name of the VCD file which is generated.
-VCD_FN               := status_module.sv
+VCD_FN               := status_module.vcd
 
 # --- High-Level-Synthesis related ---
 # Put path to the HLS C/C++ source file

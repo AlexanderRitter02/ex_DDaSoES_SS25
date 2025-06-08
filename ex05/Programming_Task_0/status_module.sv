@@ -1,18 +1,10 @@
+import fourteen_segment_display::*;
 module status_module(
   input logic  [7 : 0] temperature_in,
   input logic reset_n_in,
   input logic clock_in,
   output logic [14:0] display_pins_out
 );
-
-typedef logic [14 : 0] pins_out;
-
-localparam pins_out R = 'b001110001001101;
-localparam pins_out O = 'b001010100010101;
-localparam pins_out C = 'b001010100000001;
-localparam pins_out W = 'b001011001010100;
-localparam pins_out C_dot = 'b001010100100001;
-localparam pins_out W_dot = 'b001011001110100;
 
 typedef enum {
     RESET,
@@ -29,7 +21,7 @@ state_t current_state, next_state;
 // State transitions on positive clock edge and reset
 always_ff @(posedge clock_in or negedge reset_n_in) begin
     if(!reset_n_in) begin
-        display_pins_out <= R;
+        current_state <= RESET;
     end else begin
         current_state <= next_state;
     end
@@ -71,8 +63,8 @@ always_comb begin
             end
         end
         COLD: begin
-            // Additional case <45° (check first!)
-            if($signed(temperature_in) < 45) begin
+            // Additional case <-45° (check first!)
+            if($signed(temperature_in) < -45) begin
                 next_state = TOO_COLD;
             end else if($signed(temperature_in) <= -16) begin
                 next_state = COLD;
