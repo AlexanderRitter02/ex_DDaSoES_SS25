@@ -1,0 +1,36 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-coverage
+all
+-covoverwrite
+-abvevalnochange
+-elaborate
+-v93
+-sv
+-exit
+-access
++rw
+-timescale
+1ps/1fs
+-vhdlsync
+-enable_tcl_tcheck_net
+-l
+xrun.log
+-append_log
+-nohistory
+-v200x
+-nowarn
+CSINFI
+-allowredefinition
+-xmlibdirname
+post_sim
+-top
+tb_cdc
+/nfs/wsi/es/eda/Nangate/stdc/si2/instances/latest/verilog/NangateOpenCellLibrary.v
+./synthesis/syn_pipeline.v
+tb_cdc.sv
+tmp_sens.sv
+-define
+SYNTHESIS

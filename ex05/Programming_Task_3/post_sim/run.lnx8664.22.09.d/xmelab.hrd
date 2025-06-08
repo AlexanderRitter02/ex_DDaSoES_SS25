@@ -1,0 +1,14 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-COVERAGE
+all
+-ACCESS
++rw
+-timescale
+1ps/1fs
+-VHDLSYNC
+-V200X
+
+tb_cdc
