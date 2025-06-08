@@ -24,7 +24,7 @@ export MDV_XLM_HOME        := $(shell dirname $(shell dirname $(dir $(XCELIUM_BI
 # ==== Design Files ====
 # --- Design Setup and Simulation related ---
 # List source files here (not the testbench!).
-HDL_SRC             := display_package.sv status_module.sv moving_average.sv 
+HDL_SRC             := display_package.sv moving_average.sv 
 # Put testbench file here!
 HDL_TB_SRC          := ./tb_moving_average.sv
 # Top module name for Simulation. If a testbench exits this should be the name of the testbench module.
