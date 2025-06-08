@@ -1,9 +1,9 @@
 import fourteen_segment_display::*;
-module status_module(
-  input logic  [7 : 0] temperature_in,
-  input logic reset_n_in,
-  input logic clock_in,
-  output logic [14:0] display_pins_out
+module seg_display(
+  input logic  [7 : 0] data_i,
+  input logic rst_ni,
+  input logic clk_i,
+  output logic [14:0] fourteen_seg_out
 );
 
 typedef enum {
@@ -19,8 +19,8 @@ state_t current_state, next_state;
 
 
 // State transitions on positive clock edge and reset
-always_ff @(posedge clock_in or negedge reset_n_in) begin
-    if(!reset_n_in) begin
+always_ff @(posedge clk_i or negedge rst_ni) begin
+    if(!rst_ni) begin
         current_state <= RESET;
     end else begin
         current_state <= next_state;
@@ -30,22 +30,22 @@ end
 always_comb begin
     case(current_state)
       COLD: begin
-        display_pins_out = C;
+        fourteen_seg_out = C;
       end
       WARM: begin
-        display_pins_out = W;
+        fourteen_seg_out = W;
       end
       OKAY: begin
-        display_pins_out = O;
+        fourteen_seg_out = O;
       end
       TOO_COLD: begin
-        display_pins_out = C_dot;
+        fourteen_seg_out = C_dot;
       end
       TOO_WARM: begin
-        display_pins_out = W_dot;
+        fourteen_seg_out = W_dot;
       end
       default: begin
-        display_pins_out = R;
+        fourteen_seg_out = R;
       end
     endcase
 end
@@ -54,9 +54,9 @@ end
 always_comb begin
     case (current_state) inside
         RESET, OKAY: begin
-            if($signed(temperature_in) <= -16) begin
+            if($signed(data_i) <= -16) begin
                 next_state = COLD;
-            end else if($signed(temperature_in) > 45) begin
+            end else if($signed(data_i) > 45) begin
                 next_state = WARM;
             end else begin
                 next_state = OKAY;
@@ -64,11 +64,11 @@ always_comb begin
         end
         COLD: begin
             // Additional case <-45° (check first!)
-            if($signed(temperature_in) < -45) begin
+            if($signed(data_i) < -45) begin
                 next_state = TOO_COLD;
-            end else if($signed(temperature_in) <= -16) begin
+            end else if($signed(data_i) <= -16) begin
                 next_state = COLD;
-            end else if($signed(temperature_in) > 45) begin
+            end else if($signed(data_i) > 45) begin
                 next_state = WARM;
             end else begin
                 next_state = OKAY;
@@ -76,11 +76,11 @@ always_comb begin
         end
         WARM: begin
             // Additional case >60° (check first!)
-            if($signed(temperature_in) > 60) begin
+            if($signed(data_i) > 60) begin
                 next_state = TOO_WARM;
-            end else if($signed(temperature_in) <= -16) begin
+            end else if($signed(data_i) <= -16) begin
                 next_state = COLD;
-            end else if($signed(temperature_in) > 45) begin
+            end else if($signed(data_i) > 45) begin
                 next_state = WARM;
             end else begin
                 next_state = OKAY;
