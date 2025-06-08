@@ -7,6 +7,7 @@ cheat_sheet.pdf
 
 # SystemVeriLog folders
 sim/
+.simvision/
 coverage/
 cov_work/
 
