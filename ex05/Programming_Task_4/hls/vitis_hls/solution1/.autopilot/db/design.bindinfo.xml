@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op urem" ID="" IMPL="auto" LATENCY="35" OPTYPE="urem" PRAGMA="" RTLNAME="urem_32ns_32ns_32_36_1_U1" SOURCE="../modulo.c:4" VARIABLE="urem_ln4" MODULE="modulo" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+</BindInfo>

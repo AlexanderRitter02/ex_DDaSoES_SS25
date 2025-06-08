@@ -1,0 +1,430 @@
+
+
+================================================================
+== Vitis HLS Report for 'modulo'
+================================================================
+* Date:           Sun Jun  8 21:34:21 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        vitis_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtex7
+* Target device:  xc7vx485t-ffg1761-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  1.00 ns|  2.143 ns|     0.27 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |       35|       35|  75.005 ns|  75.005 ns|   36|   36|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 36
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.14>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%b_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %b" [../modulo.c:3]   --->   Operation 37 'read' 'b_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%a_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %a" [../modulo.c:3]   --->   Operation 38 'read' 'a_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [36/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 39 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 2.14>
+ST_2 : Operation 40 [35/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 40 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 2.14>
+ST_3 : Operation 41 [34/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 41 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 2.14>
+ST_4 : Operation 42 [33/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 42 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 2.14>
+ST_5 : Operation 43 [32/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 43 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 2.14>
+ST_6 : Operation 44 [31/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 44 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 2.14>
+ST_7 : Operation 45 [30/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 45 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 2.14>
+ST_8 : Operation 46 [29/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 46 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 2.14>
+ST_9 : Operation 47 [28/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 47 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 2.14>
+ST_10 : Operation 48 [27/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 48 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 2.14>
+ST_11 : Operation 49 [26/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 49 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 2.14>
+ST_12 : Operation 50 [25/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 50 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 2.14>
+ST_13 : Operation 51 [24/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 51 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 2.14>
+ST_14 : Operation 52 [23/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 52 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 2.14>
+ST_15 : Operation 53 [22/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 53 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 2.14>
+ST_16 : Operation 54 [21/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 54 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 2.14>
+ST_17 : Operation 55 [20/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 55 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 2.14>
+ST_18 : Operation 56 [19/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 56 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 2.14>
+ST_19 : Operation 57 [18/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 57 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 2.14>
+ST_20 : Operation 58 [17/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 58 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 2.14>
+ST_21 : Operation 59 [16/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 59 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 2.14>
+ST_22 : Operation 60 [15/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 60 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 2.14>
+ST_23 : Operation 61 [14/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 61 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 2.14>
+ST_24 : Operation 62 [13/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 62 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 2.14>
+ST_25 : Operation 63 [12/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 63 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 2.14>
+ST_26 : Operation 64 [11/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 64 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 2.14>
+ST_27 : Operation 65 [10/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 65 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 2.14>
+ST_28 : Operation 66 [9/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 66 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 28> <Delay = 2.14>
+ST_29 : Operation 67 [8/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 67 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 29> <Delay = 2.14>
+ST_30 : Operation 68 [7/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 68 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 2.14>
+ST_31 : Operation 69 [6/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 69 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 2.14>
+ST_32 : Operation 70 [5/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 70 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 32> <Delay = 2.14>
+ST_33 : Operation 71 [4/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 71 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 33> <Delay = 2.14>
+ST_34 : Operation 72 [3/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 72 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 34> <Delay = 2.14>
+ST_35 : Operation 73 [2/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 73 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 35> <Delay = 2.14>
+ST_36 : Operation 74 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 0"   --->   Operation 74 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 75 [1/1] (0.00ns)   --->   "%spectopmodule_ln3 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [../modulo.c:3]   --->   Operation 75 'spectopmodule' 'spectopmodule_ln3' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 76 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %a"   --->   Operation 76 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 77 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %a, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 77 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 78 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %b"   --->   Operation 78 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 79 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %b, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 79 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 80 [1/36] (2.14ns)   --->   "%urem_ln4 = urem i32 %a_read, i32 %b_read" [../modulo.c:4]   --->   Operation 80 'urem' 'urem_ln4' <Predicate = true> <Delay = 2.14> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 35> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 81 [1/1] (0.00ns)   --->   "%ret_ln4 = ret i32 %urem_ln4" [../modulo.c:4]   --->   Operation 81 'ret' 'ret_ln4' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 1ns, clock uncertainty: 0.27ns.
+
+ <State 1>: 2.14ns
+The critical path consists of the following:
+	wire read operation ('b', ../modulo.c:3) on port 'b' (../modulo.c:3) [9]  (0 ns)
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 2>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 3>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 4>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 5>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 6>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 7>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 8>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 9>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 10>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 11>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 12>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 13>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 14>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 15>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 16>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 17>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 18>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 19>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 20>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 21>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 22>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 23>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 24>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 25>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 26>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 27>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 28>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 29>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 30>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 31>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 32>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 33>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 34>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 35>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+ <State 36>: 2.14ns
+The critical path consists of the following:
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

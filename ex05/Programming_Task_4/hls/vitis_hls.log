@@ -1,0 +1,98 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+  **** SW Build 3670227 on Oct 13 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /nfs/wsi/es/tools/xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/nfs/wsi/es/tools/xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'ritterale' on host 'habanera.cs.uni-tuebingen.de' (Linux_x86_64 version 4.18.0-477.21.1.el8_8.x86_64) on Sun Jun 08 21:33:56 CEST 2025
+INFO: [HLS 200-10] On os "AlmaLinux release 8.6 (Sky Tiger)"
+INFO: [HLS 200-10] In directory '/home/ritterale/ex_DDaSoES_SS25/ex05/Programming_Task_4'
+Sourcing Tcl script './hls/vconf.tcl'
+INFO: [HLS 200-1510] Running: source ./hls/vconf.tcl
+INFO: [HLS 200-1510] Running: open_project -reset vitis_hls 
+INFO: [HLS 200-10] Creating and opening project '/home/ritterale/ex_DDaSoES_SS25/ex05/Programming_Task_4/hls/vitis_hls'.
+INFO: [HLS 200-1510] Running: set_top modulo 
+INFO: [HLS 200-1510] Running: add_files ../modulo.c 
+INFO: [HLS 200-10] Adding design file '../modulo.c' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution '/home/ritterale/ex_DDaSoES_SS25/ex05/Programming_Task_4/hls/vitis_hls/solution1'.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7vx485tffg1761-2 
+INFO: [HLS 200-1611] Setting target device to 'xc7vx485t-ffg1761-2'
+INFO: [HLS 200-1510] Running: create_clock -period 1ns 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 1ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+Running Dispatch Server on port: 38401
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.05 seconds; current allocated memory: 754.527 MB.
+INFO: [HLS 200-10] Analyzing design file '../modulo.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.36 seconds. CPU system time: 0.41 seconds. Elapsed time: 3.2 seconds; current allocated memory: 756.250 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.31 seconds. CPU system time: 0.41 seconds. Elapsed time: 5.41 seconds; current allocated memory: 756.625 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 756.625 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 757.137 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 757.219 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 777.281 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 777.281 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'modulo' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'modulo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-1015] Estimated delay Estimated delay (2.14ns)  of 'urem' operation ('urem_ln4', ../modulo.c:4) exceeds the target cycle time (target cycle time: 1ns, clock uncertainty: 0.27ns, effective cycle time: 0.73ns).
+
+Resolution: For help on HLS 200-1015 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1015.html
+WARNING: [HLS 200-871] Estimated clock period (2.143ns) exceeds the target (target clock period: 1ns, clock uncertainty: 0.27ns, effective delay budget: 0.73ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'modulo' consists of the following:	wire read operation ('b', ../modulo.c:3) on port 'b' (../modulo.c:3) [9]  (0 ns)
+	'urem' operation ('urem_ln4', ../modulo.c:4) [11]  (2.14 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.28 seconds; current allocated memory: 777.281 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 777.281 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'modulo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'modulo/a' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'modulo/b' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'modulo' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'urem_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'modulo'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 777.281 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.56 seconds; current allocated memory: 777.281 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.19 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.48 seconds; current allocated memory: 777.281 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for modulo.
+INFO: [VLOG 209-307] Generating Verilog RTL for modulo.
+INFO: [HLS 200-789] **** Estimated Fmax: 466.64 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 4.41 seconds. CPU system time: 0.91 seconds. Elapsed time: 10.88 seconds; current allocated memory: 22.754 MB.
+INFO: [HLS 200-1510] Running: export_design -format ip_catalog -display_name d37fa0eb34ee6115b71f12b7fe0b461f 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 2045.180 ; gain = 117.055 ; free physical = 1581 ; free virtual = 6610
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/nfs/wsi/es/tools/xilinx/Vivado/2022.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sun Jun  8 21:34:58 2025...
+INFO: [HLS 200-802] Generated output file vitis_hls/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 17.1 seconds. CPU system time: 2 seconds. Elapsed time: 45.97 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 24.42 seconds. Total CPU system time: 3.72 seconds. Total elapsed time: 74.39 seconds; peak allocated memory: 777.281 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Sun Jun  8 21:35:08 2025...
+INFO: [HLS UID] d37fa0eb34ee6115b71f12b7fe0b461f
