@@ -1,0 +1,2 @@
+SOFTINCLUDE /nfs/wsi/es/tools/cadence/XCELIUM/22.09.007/tools/inca/files/cds.lib
+define worklib ../worklib

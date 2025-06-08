@@ -1,0 +1,33 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./post_sim/run.lnx8664.22.09.d
+-RUNMODE
+-amsdlibdir
+./post_sim/AMSD
+-abvevalnochange
+-sv
+-NOWARN
+CSINFI
+-ALLOWREDEFINITION
+-XMLIBDIRNAME
+post_sim
+/nfs/wsi/es/eda/Nangate/stdc/si2/instances/latest/verilog/NangateOpenCellLibrary.v
+./synthesis/syn_pipeline.v
+tb_cdc.sv
+tmp_sens.sv
+-DEFINE
+SYNTHESIS
+-CDSLIB
+./post_sim/run.lnx8664.22.09.d/cdsrun.lib
+-HDLVAR
+./post_sim/run.lnx8664.22.09.d/hdlrun.var
+-no_analogsolver
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./post_sim/run.lnx8664.22.09.d/xllibs
+-ALLOWUNBOUND
+-hastop

@@ -1,0 +1,29 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-amsdlibdir
+./post_sim/AMSD
+-COVOVERWRITE
+-EXIT
+-NOWARN
+CSINFI
+-MESSAGES
++EMGRLOG
+xrun.log
+-XLSTIME
+1749390224
+-XLKEEP
+-XLMODE
+./post_sim/run.lnx8664.22.09.d
+-RUNMODE
+-CDSLIB
+./post_sim/run.lnx8664.22.09.d/cds.lib
+-HDLVAR
+./post_sim/run.lnx8664.22.09.d/hdl.var
+-XLNAME
+xrun
+-XLVERSION
+"TOOL:	xrun(64)	22.09-s007"
+-XLNAME
+./post_sim/run.lnx8664.22.09.d/habanera.cs.uni-tuebingen.de_74284
