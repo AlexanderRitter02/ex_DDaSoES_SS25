@@ -1,0 +1,58 @@
+---
+MainSourceFile:  /home/ritterale/ex_DDaSoES_SS25/ex06/Programming_Task_1/hls/vitis_hls/solution1/.autopilot/db/cbc.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1211_1:  '
+    FileOffset:      1211
+    FilePath:        /nfs/wsi/es/tools/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h
+    Replacements:    
+      - FilePath:        /home/ritterale/ex_DDaSoES_SS25/ex06/Programming_Task_1/hls/vitis_hls/solution1/.autopilot/db/cbc.pp.0.cpp
+        Offset:          51955
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1211_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /nfs/wsi/es/tools/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/ritterale/ex_DDaSoES_SS25/ex06/Programming_Task_1/hls/vitis_hls/solution1/.autopilot/db/cbc.pp.0.cpp
+        Offset:          259296
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /nfs/wsi/es/tools/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/ritterale/ex_DDaSoES_SS25/ex06/Programming_Task_1/hls/vitis_hls/solution1/.autopilot/db/cbc.pp.0.cpp
+        Offset:          259735
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /nfs/wsi/es/tools/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/ritterale/ex_DDaSoES_SS25/ex06/Programming_Task_1/hls/vitis_hls/solution1/.autopilot/db/cbc.pp.0.cpp
+        Offset:          260175
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1245_1:  '
+    FileOffset:      1245
+    FilePath:        /nfs/wsi/es/tools/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /home/ritterale/ex_DDaSoES_SS25/ex06/Programming_Task_1/hls/vitis_hls/solution1/.autopilot/db/cbc.pp.0.cpp
+        Offset:          518696
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1245_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_18_1:  '
+    FileOffset:      18
+    FilePath:        /home/ritterale/ex_DDaSoES_SS25/ex06/Programming_Task_1/cbc.cpp
+    Replacements:    
+      - FilePath:        /home/ritterale/ex_DDaSoES_SS25/ex06/Programming_Task_1/hls/vitis_hls/solution1/.autopilot/db/cbc.pp.0.cpp
+        Offset:          862752
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_18_1: '
+...

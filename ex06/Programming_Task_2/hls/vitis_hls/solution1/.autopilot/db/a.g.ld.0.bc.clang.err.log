@@ -1,0 +1,2 @@
+remark: ../cbc.cpp:11:0: Unrolling loop 'VITIS_LOOP_18_1' (../cbc.cpp:18:22) in function 'crypt_message' completely with a factor of 4
+remark: ../cbc.cpp:11:0: Inlining function 'xor_chunk(ap_int<16>, ap_int<16>)' into 'crypt_message(bool, ap_int<64>, ap_int<16>)'

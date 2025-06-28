@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Jun 28 17:21:34 2025
+# Process ID: 91136
+# Current directory: /home/ritterale/ex_DDaSoES_SS25/ex06/Programming_Task_1/hls/vitis_hls/solution1/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/ritterale/ex_DDaSoES_SS25/ex06/Programming_Task_1/hls/vitis_hls/solution1/impl/ip/vivado.log
+# Journal file: /home/ritterale/ex_DDaSoES_SS25/ex06/Programming_Task_1/hls/vitis_hls/solution1/impl/ip/vivado.jou
+# Running On: habanera.cs.uni-tuebingen.de, OS: Linux, CPU Frequency: 3600.000 MHz, CPU Physical cores: 4, Host memory: 7945 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2044.184 ; gain = 116.055 ; free physical = 125 ; free virtual = 4950
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/nfs/wsi/es/tools/xilinx/Vivado/2022.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 28 17:22:01 2025...

@@ -1,0 +1,135 @@
+
+
+================================================================
+== Vitis HLS Report for 'crypt_message'
+================================================================
+* Date:           Sat Jun 28 17:21:29 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        vitis_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtex7
+* Target device:  xc7vx485t-ffg1761-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  50.00 ns|  2.168 ns|    13.50 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.16>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 0"   --->   Operation 2 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%spectopmodule_ln11 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [../cbc.cpp:11]   --->   Operation 3 'spectopmodule' 'spectopmodule_ln11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %encrypt_decrypt"   --->   Operation 4 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %encrypt_decrypt, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %message"   --->   Operation 6 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %message, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %key"   --->   Operation 8 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %key, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%key_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %key" [../cbc.cpp:11]   --->   Operation 10 'read' 'key_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%message_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %message" [../cbc.cpp:11]   --->   Operation 11 'read' 'message_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%encrypt_decrypt_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %encrypt_decrypt" [../cbc.cpp:11]   --->   Operation 12 'read' 'encrypt_decrypt_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%chunk_V = trunc i64 %message_read"   --->   Operation 13 'trunc' 'chunk_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.54ns)   --->   "%ret = xor i16 %chunk_V, i16 %key_read"   --->   Operation 14 'xor' 'ret' <Predicate = true> <Delay = 0.54> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns) (grouped into LUT with out node ret_1)   --->   "%next_key_V = select i1 %encrypt_decrypt_read, i16 %chunk_V, i16 %ret"   --->   Operation 15 'select' 'next_key_V' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.47> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%chunk_V_1 = partselect i16 @_ssdm_op_PartSelect.i16.i64.i32.i32, i64 %message_read, i32 16, i32 31"   --->   Operation 16 'partselect' 'chunk_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.54ns) (out node of the LUT)   --->   "%ret_1 = xor i16 %next_key_V, i16 %chunk_V_1"   --->   Operation 17 'xor' 'ret_1' <Predicate = true> <Delay = 0.54> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.00ns) (grouped into LUT with out node ret_2)   --->   "%next_key_V_1 = select i1 %encrypt_decrypt_read, i16 %chunk_V_1, i16 %ret_1"   --->   Operation 18 'select' 'next_key_V_1' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.47> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%chunk_V_2 = partselect i16 @_ssdm_op_PartSelect.i16.i64.i32.i32, i64 %message_read, i32 32, i32 47"   --->   Operation 19 'partselect' 'chunk_V_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.54ns) (out node of the LUT)   --->   "%ret_2 = xor i16 %next_key_V_1, i16 %chunk_V_2"   --->   Operation 20 'xor' 'ret_2' <Predicate = true> <Delay = 0.54> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.00ns) (grouped into LUT with out node ret_3)   --->   "%next_key_V_2 = select i1 %encrypt_decrypt_read, i16 %chunk_V_2, i16 %ret_2"   --->   Operation 21 'select' 'next_key_V_2' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.47> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (0.00ns) (grouped into LUT with out node ret_3)   --->   "%chunk_V_3 = partselect i16 @_ssdm_op_PartSelect.i16.i64.i32.i32, i64 %message_read, i32 48, i32 63"   --->   Operation 22 'partselect' 'chunk_V_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.54ns) (out node of the LUT)   --->   "%ret_3 = xor i16 %next_key_V_2, i16 %chunk_V_3"   --->   Operation 23 'xor' 'ret_3' <Predicate = true> <Delay = 0.54> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%p_Result_s = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i16.i16.i16.i16, i16 %ret_3, i16 %ret_2, i16 %ret_1, i16 %ret"   --->   Operation 24 'bitconcatenate' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%ret_ln33 = ret i64 %p_Result_s" [../cbc.cpp:33]   --->   Operation 25 'ret' 'ret_ln33' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 50ns, clock uncertainty: 13.5ns.
+
+ <State 1>: 2.17ns
+The critical path consists of the following:
+	wire read operation ('key_read', ../cbc.cpp:11) on port 'key' (../cbc.cpp:11) [12]  (0 ns)
+	'xor' operation ('ret') [16]  (0.542 ns)
+	'select' operation ('next_key.V') [17]  (0 ns)
+	'xor' operation ('ret') [19]  (0.542 ns)
+	'select' operation ('next_key.V') [20]  (0 ns)
+	'xor' operation ('ret') [22]  (0.542 ns)
+	'select' operation ('next_key.V') [23]  (0 ns)
+	'xor' operation ('ret') [25]  (0.542 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

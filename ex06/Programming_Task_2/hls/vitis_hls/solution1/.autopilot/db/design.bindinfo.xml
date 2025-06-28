@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op xor" ID="" IMPL="auto" LATENCY="0" OPTYPE="xor" PRAGMA="" RTLNAME="ret_fu_68_p2" SOURCE="/nfs/wsi/es/tools/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h:1499" VARIABLE="ret" MODULE="crypt_message" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op select" ID="" IMPL="auto_sel" LATENCY="0" OPTYPE="select" PRAGMA="" RTLNAME="next_key_V_fu_74_p3" SOURCE="../ap_int.h:143" VARIABLE="next_key_V" MODULE="crypt_message" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op xor" ID="" IMPL="auto" LATENCY="0" OPTYPE="xor" PRAGMA="" RTLNAME="ret_1_fu_92_p2" SOURCE="/nfs/wsi/es/tools/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h:1499" VARIABLE="ret_1" MODULE="crypt_message" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op select" ID="" IMPL="auto_sel" LATENCY="0" OPTYPE="select" PRAGMA="" RTLNAME="next_key_V_1_fu_98_p3" SOURCE="../ap_int.h:143" VARIABLE="next_key_V_1" MODULE="crypt_message" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op xor" ID="" IMPL="auto" LATENCY="0" OPTYPE="xor" PRAGMA="" RTLNAME="ret_2_fu_116_p2" SOURCE="/nfs/wsi/es/tools/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h:1499" VARIABLE="ret_2" MODULE="crypt_message" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op select" ID="" IMPL="auto_sel" LATENCY="0" OPTYPE="select" PRAGMA="" RTLNAME="next_key_V_2_fu_122_p3" SOURCE="../ap_int.h:143" VARIABLE="next_key_V_2" MODULE="crypt_message" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op xor" ID="" IMPL="auto" LATENCY="0" OPTYPE="xor" PRAGMA="" RTLNAME="ret_3_fu_140_p2" SOURCE="/nfs/wsi/es/tools/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_base.h:1499" VARIABLE="ret_3" MODULE="crypt_message" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+</BindInfo>
