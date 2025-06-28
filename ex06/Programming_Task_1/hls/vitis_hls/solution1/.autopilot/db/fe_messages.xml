@@ -1,0 +1,21 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/nfs/wsi/es/tools/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:678:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/nfs/wsi/es/tools/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:692:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/nfs/wsi/es/tools/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:706:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/ritterale/ex_DDaSoES_SS25/ex06/Programming_Task_1/hls/vconf.tcl:8:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="crypt_message" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=crypt_message" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../cbc.cpp:22:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="crypt_message" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="../cbc.cpp:11:0" msg_body="Inlining function 'xor_chunk(ap_int&lt;16&gt;, ap_int&lt;16&gt;)' into 'crypt_message(bool, ap_int&lt;64&gt;, ap_int&lt;16&gt;)'">
+        <args Callee="xor_chunk(ap_int&lt;16&gt;, ap_int&lt;16&gt;)" Caller="crypt_message(bool, ap_int&lt;64&gt;, ap_int&lt;16&gt;)"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

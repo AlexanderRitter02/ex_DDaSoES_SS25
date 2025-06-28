@@ -1,8 +1,8 @@
 
 #include "ap_int.h"
 
-#define m 1
-#define n 1
+#define m 4
+#define n 2
 
 ap_int<n*8> xor_chunk(ap_int<n*8> chunk, ap_int<n*8> key) {
     return chunk ^ key;

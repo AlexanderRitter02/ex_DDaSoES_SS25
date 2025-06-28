@@ -1,0 +1,14 @@
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: ../cbc.cpp, Line: 11, Column: 0 }
+Function:        _Z13crypt_messageb6ap_intILi64EES_ILi16EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xor_chunk(ap_int<16>, ap_int<16>)'
+    DebugLoc:        { File: ../cbc.cpp, Line: 7, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'crypt_message(bool, ap_int<64>, ap_int<16>)'
+    DebugLoc:        { File: ../cbc.cpp, Line: 11, Column: 0 }
+  - String:          ''''
+...

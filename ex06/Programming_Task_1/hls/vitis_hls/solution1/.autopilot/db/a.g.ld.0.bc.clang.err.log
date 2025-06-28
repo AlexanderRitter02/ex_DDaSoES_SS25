@@ -1,0 +1,1 @@
+remark: ../cbc.cpp:11:0: Inlining function 'xor_chunk(ap_int<16>, ap_int<16>)' into 'crypt_message(bool, ap_int<64>, ap_int<16>)'

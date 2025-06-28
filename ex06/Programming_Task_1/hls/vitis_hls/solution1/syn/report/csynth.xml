@@ -1,0 +1,390 @@
+<profile>
+    <ReportVersion>
+        <Version>2022.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>virtex7</ProductFamily>
+        <Part>xc7vx485t-ffg1761-2</Part>
+        <TopModelName>crypt_message</TopModelName>
+        <TargetClockPeriod>50.00</TargetClockPeriod>
+        <ClockUncertainty>13.50</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>7.785</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>6</Best-caseLatency>
+            <Average-caseLatency>6</Average-caseLatency>
+            <Worst-caseLatency>6</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.300 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.300 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.300 us</Worst-caseRealTimeLatency>
+            <Interval-min>7</Interval-min>
+            <Interval-max>7</Interval-max>
+        </SummaryOfOverallLatency>
+        <SummaryOfLoopLatency>
+            <VITIS_LOOP_18_1>
+                <Slack>36.50</Slack>
+                <TripCount>4</TripCount>
+                <Latency>4</Latency>
+                <AbsoluteTimeLatency>200</AbsoluteTimeLatency>
+                <PipelineII>1</PipelineII>
+                <PipelineDepth>1</PipelineDepth>
+                <InstanceList/>
+            </VITIS_LOOP_18_1>
+        </SummaryOfLoopLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <FF>85</FF>
+            <LUT>1654</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <DSP>0</DSP>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>2060</BRAM_18K>
+            <DSP>2800</DSP>
+            <FF>607200</FF>
+            <LUT>303600</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>crypt_message</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>crypt_message</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>crypt_message</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>crypt_message</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>crypt_message</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>crypt_message</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_return</name>
+            <Object>crypt_message</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>encrypt_decrypt</name>
+            <Object>encrypt_decrypt</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>bool</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>message</name>
+            <Object>message</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>64</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>key</name>
+            <Object>key</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="2">
+            <ModuleName>crypt_message</ModuleName>
+            <BindInstances>i_2_fu_118_p2 sub_ln628_fu_164_p2 sub_ln628_1_fu_176_p2</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>crypt_message</Name>
+            <Loops>
+                <VITIS_LOOP_18_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>50.00</TargetClockPeriod>
+                    <ClockUncertainty>13.50</ClockUncertainty>
+                    <EstimatedClockPeriod>7.785</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>6</Best-caseLatency>
+                    <Average-caseLatency>6</Average-caseLatency>
+                    <Worst-caseLatency>6</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.300 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.300 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.300 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>7</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_18_1>
+                        <Name>VITIS_LOOP_18_1</Name>
+                        <Slack>36.50</Slack>
+                        <TripCount>4</TripCount>
+                        <Latency>4</Latency>
+                        <AbsoluteTimeLatency>0.200 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_18_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>85</FF>
+                    <AVAIL_FF>607200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>1654</LUT>
+                    <AVAIL_LUT>303600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>2060</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>2800</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="i_2_fu_118_p2" SOURCE="../cbc.cpp:18" URAM="0" VARIABLE="i_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln628_fu_164_p2" SOURCE="/nfs/wsi/es/tools/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:628" URAM="0" VARIABLE="sub_ln628"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln628_1_fu_176_p2" SOURCE="/nfs/wsi/es/tools/xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:628" URAM="0" VARIABLE="sub_ln628_1"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands/>
+    <Args>
+        <Arg ArgName="encrypt_decrypt" index="0" direction="in" srcType="bool" srcSize="1">
+            <hwRefs>
+                <hwRef type="port" interface="encrypt_decrypt" name="encrypt_decrypt" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="message" index="1" direction="in" srcType="ap_int&lt;64&gt;" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="message" name="message" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="key" index="2" direction="in" srcType="ap_int&lt;16&gt;" srcSize="16">
+            <hwRefs>
+                <hwRef type="port" interface="key" name="key" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <ReturnValue ReturnValueName="srcType">ap_int&lt;64&gt;</ReturnValue>
+    <ReturnValue ReturnValueName="srcSize">64</ReturnValue>
+    <ReturnValue ReturnValueName="hwRefs" type="port" interface="ap_return" name="ap_return" usage="data" direction="out"/>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_return" type="data" busTypeName="data" protocol="ap_ctrl_hs" mode="master" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="ap_return">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_return</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="encrypt_decrypt" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="encrypt_decrypt">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>encrypt_decrypt</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="encrypt_decrypt"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="message" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="64">
+            <portMaps>
+                <portMap portMapName="message">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>message</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="message"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="key" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="key">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>key</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="key"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="Other Ports">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Mode, Bitwidth</keys>
+                    <column name="ap_return">, 64, , </column>
+                    <column name="encrypt_decrypt">ap_none, 1, , </column>
+                    <column name="key">ap_none, 16, , </column>
+                    <column name="message">ap_none, 64, , </column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk, </column>
+                    <column name="ap_rst">reset, ap_rst, </column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start, </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="encrypt_decrypt">in, bool</column>
+                    <column name="message">in, ap_int&lt;64&gt;</column>
+                    <column name="key">in, ap_int&lt;16&gt;</column>
+                    <column name="return">out, ap_int&lt;64&gt;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="encrypt_decrypt">encrypt_decrypt, port, , </column>
+                    <column name="message">message, port, , </column>
+                    <column name="key">key, port, , </column>
+                    <column name="return">ap_return, port, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <PragmaReport>
+        <Pragma type="inline" location="../cbc.cpp:22" status="valid" parentFunction="crypt_message" variable="" isDirective="0" options=""/>
+    </PragmaReport>
+</profile>
+

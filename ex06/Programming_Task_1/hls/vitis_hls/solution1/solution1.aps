@@ -1,0 +1,26 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="solution1"/>
+    </name>
+    <project>
+        <value string="vitis_hls"/>
+    </project>
+    <flowTarget value="vivado"/>
+    <config>
+        <config_interface m_axi_latency="0"/>
+        <config_export display_name="d37fa0eb34ee6115b71f12b7fe0b461f" format="ip_catalog"/>
+    </config>
+    <targetInfo>
+        <TargetInfo value="xc7vx485t:-ffg1761:-2"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/virtex7/virtex7" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock name="default" period="50ns" default="false"/>
+    </clockList>
+    <ExportDesign askAgain="true" evaluate="false" rtl="verilog" formatName="ip_catalog">
+        <Format formatName="ip_catalog" description="" vendor="" library="" ipname="crypt_message" version="" display_name="d37fa0eb34ee6115b71f12b7fe0b461f" taxonomy=""/>
+    </ExportDesign>
+</AutoPilot:solution>
+
