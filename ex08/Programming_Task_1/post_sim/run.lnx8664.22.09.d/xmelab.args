@@ -1,0 +1,34 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-amsdlibdir
+./post_sim/AMSD
+-COVERAGE
+all
+-V93
+-ACCESS
++rw
+-timescale
+1ps/1fs
+-VHDLSYNC
+-ENABLE_TCL_TCHECK_NET
+-V200X
+-NOWARN
+CSINFI
+-XMLIBDIRNAME
+post_sim
+-no_analogsolver
+-MESSAGES
+tb_adder
+-XLMODE
+./post_sim/run.lnx8664.22.09.d
+-RUNMODE
+-CDSLIB
+./post_sim/run.lnx8664.22.09.d/cds.lib
+-HDLVAR
+./post_sim/run.lnx8664.22.09.d/hdl.var
+-WORK
+worklib
+-IRUNHASTOP
+-HASXLMODE

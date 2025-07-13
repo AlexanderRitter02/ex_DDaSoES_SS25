@@ -1,6 +1,6 @@
 module pld #(
-    parameter NUM_PORTS_IN  = 10,  // --N
-    parameter NUM_PORTS_OUT = 10   // --M
+    parameter NUM_PORTS_IN  = 1,  // --N
+    parameter NUM_PORTS_OUT = 1   // --M
 ) (
   input  logic [                               NUM_PORTS_IN - 1 : 0] inputs_i,
   // With N many inputs we have 2**N many ANDs, which means we have (2*N * 2*N) * 2**N many fuses
