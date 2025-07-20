@@ -390,10 +390,12 @@ class DSESGraph:
     def flow_map(self, K):
         import itertools
 
-        Nv = # TODO 
-        PI = # TODO
-        PO = # TODO
-        GATES = # TODO
+        # Nv must be dict of all sets Nv, since accessed this way Nv[v]
+        Nv_for_v = lambda v : nx.ancestors(self._GRAPH, v) | {v}
+        Nv = {node: Nv_for_v(node) for node in self._GRAPH.nodes}
+        PI = [node for node in self._GRAPH.nodes if self._GRAPH.in_degree(node) == 0] # no predecessors
+        PO = [node for node in self._GRAPH.nodes if self._GRAPH.out_degree(node) == 0] # no successors
+        GATES = [node for node in self._GRAPH.nodes if node not in PI and node not in PO]
 
         # Labels
         l = {n: 0 for n in self._node_attributes.keys() if self._GRAPH.in_degree(n) == 0}
@@ -479,7 +481,8 @@ class DSESGraph:
         import itertools
 
         # All predecessor nodes of node
-        Nv = # TODO
+        Nv_for_v = lambda v : nx.ancestors(self._GRAPH, v) | {v}
+        Nv = {node: Nv_for_v(node) for node in self._GRAPH.nodes}
 
         # Enumerate all mappings
         node_mapping = dict()
@@ -623,8 +626,10 @@ if __name__ == "__main__":
     fmap.alap(10)
     fmap.schedule_to_dot("alap")
 
+    print("Running Flowmap...")
     # Test Flow Map
     fmap.flow_map(3)
+    print("Finished flowmap")
 
     # Graph DSES Lecture
     tmap = DSESGraph()
